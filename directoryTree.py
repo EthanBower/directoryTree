@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 #This file will search every part of a given directory, and produce a directory tree.
 #As an optional, you can even search for file(s)/folder(s). The Results will be shown on the directory tree AND on plane text below it.
-#!/usr/bin/env python
+
 
 import os
 
@@ -35,6 +37,9 @@ class dirtree():
                             else:
                                 print("{} [FILE]".format(file) + " <---- *FILE FOUND*")
                             self.found_keywords.append(self.starting_path + self.path_ext) #Add the directory location to a list. There might be more files that fit this specific keyword
+                        else:
+                            print("   " * indent + "{} [FILE]".format(file))
+                        
                     except:
                         if self.indent != 0:
                             print("   " * self.indent + "|`--{} [FILE]".format(file))

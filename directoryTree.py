@@ -1,5 +1,6 @@
 #This file will search every part of a given directory, and produce a directory tree.
 #As an optional, you can even search for file(s)/folder(s). The Results will be shown on the directory tree AND on plane text below it.
+#!/usr/bin/env python
 
 import os
 
